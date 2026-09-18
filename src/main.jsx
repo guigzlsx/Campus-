@@ -141,10 +141,10 @@ function App() {
   return (
     <div className="app-shell" data-theme="campus-plus" style={{ '--ds-accent': AppTheme.colors.olive }}>
       <aside className="sidebar">
-        <div className="brand-lockup" onClick={() => navigate('home')} role="button" tabIndex="0">
+        <button className="brand-lockup" type="button" onClick={() => navigate('home')} aria-label="Retourner à l’accueil">
           <div className="brand-mark"><span></span><span></span><span></span></div>
           <div><div className="brand-name">Campus<span>+</span></div><div className="brand-subtitle">Ton campus, simplement.</div></div>
-        </div>
+        </button>
 
         <div className="sidebar-label">Explorer</div>
         <nav className="main-nav" aria-label="Navigation principale">
@@ -172,7 +172,7 @@ function App() {
 
       <main className="main-panel">
         <header className="topbar">
-          <div className="mobile-brand"><div className="brand-mark"><span></span><span></span><span></span></div><span>Campus<span>+</span></span></div>
+          <button className="mobile-brand" type="button" onClick={() => navigate('home')} aria-label="Retourner à l’accueil"><div className="brand-mark"><span></span><span></span><span></span></div><span>Campus<span>+</span></span></button>
           <div className="breadcrumb"><span>Campus+</span><span className="breadcrumb-separator">/</span><strong>{navItems.find((item) => item.id === activeView)?.label || (activeView === 'profile' ? 'Profil' : 'Accueil')}</strong></div>
           <div className="topbar-actions">
             <IconButton className="icon-button mobile-menu" onClick={() => setMobileMenuOpen((current) => !current)} aria-label="Ouvrir le menu"><Icon name="menu" /></IconButton>

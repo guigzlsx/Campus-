@@ -646,3 +646,8 @@ button:focus-visible, input:focus-visible { outline-color: var(--ds-olive); }
   .mobile-menu-panel button.active, .mobile-menu-panel button:hover { color: var(--ds-text); background: var(--coral-soft); }
   .mobile-menu-panel button b { background: var(--ds-olive); }
 }
+
+.brand-lockup, .mobile-brand { border: 0; text-align: left; }
+.brand-lockup { background: transparent; }
+.brand-lockup:hover { background: transparent; }
+.mobile-brand { padding: 0; background: transparent; }
