@@ -139,7 +139,7 @@ function App() {
   }
 
   return (
-    <div className="app-shell" data-theme="campus-plus" style={{ '--ds-accent': AppTheme.colors.violet }}>
+    <div className="app-shell" data-theme="campus-plus" style={{ '--ds-accent': AppTheme.colors.olive }}>
       <aside className="sidebar">
         <div className="brand-lockup" onClick={() => navigate('home')} role="button" tabIndex="0">
           <div className="brand-mark"><span></span><span></span><span></span></div>
