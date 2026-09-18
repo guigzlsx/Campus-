@@ -32,5 +32,5 @@ export function ProgressRing({ value, size = 64, strokeWidth = 5, label }) {
 }
 
 export function BottomNav({ items, activeView, onNavigate, profileActive = false }) {
-  return <nav className="bottom-nav" aria-label="Navigation mobile">{items.map((item) => <button key={item.id} className={activeView === item.id ? 'active' : ''} onClick={() => onNavigate(item.id)}>{item.icon}<span>{item.label}</span></button>)}<button className={profileActive ? 'active' : ''} onClick={() => onNavigate('profile')}><span className="bottom-nav-avatar">GM</span><span>Profil</span></button></nav>
+  return <nav className="bottom-nav" aria-label="Navigation mobile">{items.map((item) => <button key={item.id} className={activeView === item.id ? 'active' : ''} onClick={() => onNavigate(item.id)}>{item.icon}<span>{item.label}</span></button>)}<button className={profileActive ? 'active' : ''} onClick={() => onNavigate('profile')}><span className="bottom-nav-avatar">GLS</span><span>Profil</span></button></nav>
 }

@@ -52,8 +52,8 @@ function Icon({ name, size = 18, stroke = 1.9 }) {
   return <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth={stroke} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>
 }
 
-function Avatar({ initials = 'GM', small = false }) {
-  return <div className={`avatar ${small ? 'avatar-small' : ''}`} aria-label="Profil de Guillaume Martin">{initials}</div>
+function Avatar({ initials = 'GLS', small = false }) {
+  return <div className={`avatar ${small ? 'avatar-small' : ''}`} aria-label="Profil de Guillaume Le Saux">{initials}</div>
 }
 
 function App() {
@@ -159,14 +159,14 @@ function App() {
         <div className="sidebar-divider" />
         <button className={`student-card ${activeView === 'profile' ? 'student-card-active' : ''}`} onClick={() => navigate('profile')}>
           <div className="student-card-top"><div className="mini-logo">C+</div><span>Carte étudiante</span><Icon name="arrow" size={15} /></div>
-          <div className="student-card-name">Guillaume Martin</div>
+          <div className="student-card-name">Guillaume Le Saux</div>
           <div className="student-card-meta">M2 · Product Management</div>
           <div className="student-card-bar"><span></span></div>
         </button>
 
         <div className="sidebar-bottom">
           <div className="prototype-note"><span className="status-dot"></span><div><strong>Mode maquette</strong><small>Données locales · MVP</small></div></div>
-          <button className="profile-shortcut" onClick={() => navigate('profile')}><Avatar small /><span>Guillaume Martin</span><span className="more-dots">•••</span></button>
+          <button className="profile-shortcut" onClick={() => navigate('profile')}><Avatar small /><span>Guillaume Le Saux</span><span className="more-dots">•••</span></button>
         </div>
       </aside>
 
@@ -287,7 +287,7 @@ function Toggle({ label, value, onChange }) {
 
 function ProfileView({ profileEdit, setProfileEdit, preferences, setPreferences }) {
   const updatePreference = (key, value) => setPreferences((current) => ({ ...current, [key]: value }))
-  return <div className="view"><PageTitle eyebrow="Profil étudiant" title="Un campus qui te ressemble." description="Tes préférences permettent à Campus+ de filtrer l’essentiel pour toi." action={<button className="soft-action" onClick={() => setProfileEdit(!profileEdit)}>{profileEdit ? 'Terminer' : 'Modifier mon profil'}</button>} /><div className="profile-grid"><section className="profile-main panel-card"><div className="profile-cover"><div className="profile-pattern"></div><Avatar initials="GM" /></div><div className="profile-body"><div className="profile-title-row"><div><h2>Guillaume Martin</h2><p>M2 · Product Management</p></div><span className="profile-status"><span className="status-dot"></span> Profil complété à 80 %</span></div><div className="profile-details"><div><span>Établissement</span><strong>Campus Lyon Tech</strong></div><div><span>Année</span><strong>2026 — 2027</strong></div><div><span>Langue préférée</span><strong>Français</strong></div><div><span>Centre d’intérêt</span><strong>Produit · Design · Tech</strong></div></div>{profileEdit && <div className="edit-note"><Icon name="spark" size={16} /> Les champs sont simulés dans cette maquette : aucune donnée n’est enregistrée sur un serveur.</div>}</div></section><aside className="profile-side"><div className="digital-card"><div className="digital-card-top"><span>Campus+</span><span>2026 / 27</span></div><div className="digital-card-middle"><div className="digital-avatar">GM</div><div><strong>Guillaume Martin</strong><span>M2 · Product Management</span></div></div><div className="qr-code"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div className="digital-card-bottom"><span>Carte étudiante numérique</span><strong>CM-264-981</strong></div></div><div className="preferences-card panel-card"><div className="eyebrow">Personnalisation</div><h3>Ce que Campus+ peut anticiper</h3><Toggle label="Notifications intelligentes" value={preferences.push} /><Toggle label="Agenda et rappels" value={preferences.agenda} /><Toggle label="Suggestions de lieux" value={preferences.places} /></div></aside></div></div>
+  return <div className="view"><PageTitle eyebrow="Profil étudiant" title="Un campus qui te ressemble." description="Tes préférences permettent à Campus+ de filtrer l’essentiel pour toi." action={<button className="soft-action" onClick={() => setProfileEdit(!profileEdit)}>{profileEdit ? 'Terminer' : 'Modifier mon profil'}</button>} /><div className="profile-grid"><section className="profile-main panel-card"><div className="profile-cover"><div className="profile-pattern"></div><Avatar initials="GLS" /></div><div className="profile-body"><div className="profile-title-row"><div><h2>Guillaume Le Saux</h2><p>M2 · Product Management</p></div><span className="profile-status"><span className="status-dot"></span> Profil complété à 80 %</span></div><div className="profile-details"><div><span>Établissement</span><strong>Campus Lyon Tech</strong></div><div><span>Année</span><strong>2026 — 2027</strong></div><div><span>Langue préférée</span><strong>Français</strong></div><div><span>Centre d’intérêt</span><strong>Produit · Design · Tech</strong></div></div>{profileEdit && <div className="edit-note"><Icon name="spark" size={16} /> Les champs sont simulés dans cette maquette : aucune donnée n’est enregistrée sur un serveur.</div>}</div></section><aside className="profile-side"><div className="digital-card"><div className="digital-card-top"><span>Campus+</span><span>2026 / 27</span></div><div className="digital-card-middle"><div className="digital-avatar">GLS</div><div><strong>Guillaume Le Saux</strong><span>M2 · Product Management</span></div></div><div className="qr-code"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div className="digital-card-bottom"><span>Carte étudiante numérique</span><strong>CM-264-981</strong></div></div><div className="preferences-card panel-card"><div className="eyebrow">Personnalisation</div><h3>Ce que Campus+ peut anticiper</h3><Toggle label="Notifications intelligentes" value={preferences.push} /><Toggle label="Agenda et rappels" value={preferences.agenda} /><Toggle label="Suggestions de lieux" value={preferences.places} /></div></aside></div></div>
 }
 
 createRoot(document.getElementById('root')).render(<App />)
